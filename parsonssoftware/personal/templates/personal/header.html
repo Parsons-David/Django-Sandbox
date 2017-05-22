@@ -2,67 +2,135 @@
 <html lang="en">
 
 <head>
-	<title>David Parsons</title>
-	<meta charset="utf-8" />
-	{% load staticfiles %}
-	<link rel="stylesheet" href="{% static 'personal/css/bootstrap.min.css' %}" type = "text/css"/>
-	<meta name="viewport" content = "width=device-width, initial-scale=1.0">
 
-	<style type="text/css">
-		html,
-		body {
-		  height:100%
-		}
-	</style>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>David Parsons</title>
+
+		{% load staticfiles %}
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static 'personal/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="{% static 'personal/css/clean-blog.min.css' %}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="{% static 'personal/vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- Icons -->
+    <link rel="shortcut icon" href="{% static 'personal/img/favicon.ico' %}">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
 </head>
 
-<body class="body" style="background-color:#f6f6f6">
-	<div class="container-fluid" style="min-height:95%; ">
-		<div class="row">
-			  <div class="col-sm-2">
-				  <br>
-				  <center>
-					<img src="{% static 'personal/img/profile.jpg' %}" class="responsive-img" style='max-height:100px;' alt="face">
-				  </center>
-			  </div>
-			  <div class="col-sm-10">
-				  <br>
-				  <center>
-				  <h3>Programming, Teaching, Entrepreneurship</h3>
-				  </center>
-			  </div>
-		</div><hr>
+<body>
 
-		<div class="row">
-		  <div class="col-sm-2">
-		  <br>
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="">David Parsons</a>
+            </div>
 
-		  <br>
-		   <!-- Great, til you resize. -->
-			<!--<div class="well bs-sidebar affix" id="sidebar" style="background-color:#fff">-->
-			<div class="well bs-sidebar" id="sidebar" style="background-color:#fff">
-			  <ul class="nav nav-pills nav-stacked">
-				<li><a href='/'>Home</a></li>
-				<li><a href='/blog/'>Blog</a></li>
-				<li><a href='/contact/'>Contact</a></li>
-			  </ul>
-			</div> <!--well bs-sidebar affix-->
-		  </div> <!--col-sm-2-->
-		  <div class="col-sm-10">
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="..">Home</a>
+                    </li>
+                    <li>
+                        <a href="about.html">About Me</a>
+                    </li>
+                    <li>
+                        <a href="projects.html">Projects</a>
+                    </li>
+                    <!-- <li>
+                        <a href="blog.html">Blog</a>
+                    </li> -->
+                    <!-- <li>
+                        <a href="contact.html">Contact</a>
+                    </li> -->
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
 
-			<div class='container-fluid'>
-			<br><br>
-			   {% block content %}
-			   {% endblock %}
-			</div>
-		  </div>
-		</div>
-	</div>
-	<footer>
-		<div class="container-fluid" style='margin-left:15px'>
-			<p><a href="#" target="blank">Contact</a> | <a href="#" target="blank">LinkedIn</a> | <a href="#" target="blank">Twitter</a> | <a href="#" target="blank">Google+</a></p>
-		</div>
-	</footer>
+    <!-- Main Content -->
+
+		{% block content %}
+		{% endblock %}
+
+  <hr>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <ul class="list-inline text-center">
+                        <li>
+                            <a href="https://www.linkedin.com/in/david-parsons-ba7a24126">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/Parsons-David">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.flickr.com/photos/79294737@N04/">
+                                <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-flickr fa-stack-1x fa-inverse"></i>
+                                    </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="copyright text-muted">Copyright &copy; David Parsons 2016</p>
+                    <p class="copyright text-muted">Website Developed by David Parsons with Bootstrap and the Start Bootstrap Clean Blog Theme.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="{% static 'personal/vendor/jquery/jquery.min.js' %}"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{% static 'personal/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="{% static 'personal/js/jqBootstrapValidation.js' %}"></script>
+    <script src="{% static 'personal/js/contact_me.js' %}"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="{% static 'personal/js/clean-blog.min.js' %}"></script>
 
 </body>
 
